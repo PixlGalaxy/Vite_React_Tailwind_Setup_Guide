@@ -90,7 +90,7 @@ export default {
 };
 ```
 
-Add Tailwind directives in `src/index.css`:
+Replace all directives in `src/index.css` with Tailwind directives:
 
 ```css
 @tailwind base;
@@ -107,7 +107,7 @@ project-name/
 │   │   ├── Navbar.jsx (or Navbar.tsx)
 │   ├── pages/
 │   │   ├── Home.jsx (or Home.tsx)
-│   │   ├── About.jsx (or About.tsx)
+│   │   ├── Page.jsx (or Page.tsx)
 │   ├── App.jsx (or App.tsx)
 │   ├── main.jsx (or main.tsx)
 │   └── index.css
@@ -118,16 +118,56 @@ project-name/
 
 ## Creating Components and Pages
 
-Example `Navbar.tsx`:
+Example `Home.tsx` (Page):
+
+```tsx
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Home: React.FC = () => {
+  return (
+    <>
+      <title>Welcome to my Page</title>
+      <meta name="description" content="A shift to something with more potential." />
+
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-center">
+        <h1 className="text-5xl font-bold text-blue-600">Welcome to My Page</h1>
+        <p className="mt-4 text-lg text-gray-700">
+          Still Working Here.
+        </p>
+        <div className="mt-6 flex space-x-4">
+          <Link
+            to="/about"
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
+          >
+            Learn More
+          </Link>
+          <Link
+            to="/contact"
+            className="px-6 py-3 bg-gray-500 text-white rounded-lg shadow-md hover:bg-gray-600 transition"
+          >
+            Info
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Home;
+```
+
+Example `Navbar.tsx` (Component):
 
 ```tsx
 import { Link } from "react-router-dom";
 
 const Navbar = () => (
-  <nav className="bg-gray-800 p-4">
+  <nav className="bg-white-800 p-4">
     <ul className="flex space-x-4">
       <li><Link to="/">Home</Link></li>
       <li><Link to="/about">About</Link></li>
+      <li><Link to="/about">Other</Link></li>
     </ul>
   </nav>
 );
@@ -140,7 +180,6 @@ export default Navbar;
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
 
 const App = () => (
   <Router>
