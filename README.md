@@ -7,12 +7,13 @@ Follow these steps to quickly set up a modern and efficient development environm
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
 3. [Creating the Project with Vite](#creating-the-project-with-vite)
-4. [Setting Up Tailwind CSS](#setting-up-tailwind-css)
-5. [Project Structure](#project-structure)
-6. [Creating Components and Pages](#creating-components-and-pages)
-7. [Setting Up Routes with React Router](#setting-up-routes-with-react-router)
-8. [Starting the Development Server](#starting-the-development-server)
-9. [Conclusion](#conclusion)
+4. [Installing React Router](#installing-react-router)
+5. [Setting Up Tailwind CSS](#setting-up-tailwind-css)
+6. [Project Structure](#project-structure)
+7. [Creating Components and Pages](#creating-components-and-pages)
+8. [Setting Up Routes with React Router](#setting-up-routes-with-react-router)
+9. [Starting the Development Server](#starting-the-development-server)
+10. [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -59,6 +60,16 @@ Vite simplifies the configuration of React projects. Below are two options: one 
    ```bash
    npm install
    ```
+   
+## Installing React Router
+
+To enable navigation between pages, install React Router by running the following command:
+
+```bash
+npm install react-router-dom
+```
+
+This will allow you to define and manage routes within your application.
 
 ## Setting Up Tailwind CSS
 
