@@ -104,10 +104,10 @@ Replace all directives in `src/index.css` with Tailwind directives:
 project-name/
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx (or Navbar.tsx)
+│   │   └── Navbar.jsx (or Navbar.tsx)
 │   ├── pages/
 │   │   ├── Home.jsx (or Home.tsx)
-│   │   ├── Page.jsx (or Page.tsx)
+│   │   └── Page.jsx (or Page.tsx)
 │   ├── App.jsx (or App.tsx)
 │   ├── main.jsx (or main.tsx)
 │   └── index.css
